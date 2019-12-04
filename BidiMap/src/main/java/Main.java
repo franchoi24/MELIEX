@@ -14,7 +14,7 @@ public class Main {
 
         //System.out.println(aux.findMinInt("001111000"));
 
-        System.out.println(aux.translate2Human("101010001110111011100010101"));
+        System.out.println(aux.translate2Human("10100000001011100011101110000000101110000000101011101000101000101010001010101"));
 
     }
 
