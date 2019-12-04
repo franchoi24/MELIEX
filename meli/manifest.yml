@@ -1,0 +1,12 @@
+applications:
+- name: meli
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  path: target/meli-1.0-SNAPSHOT.jar
+  timeout: 120
+  routes:
+  - route: meli.cfapps.io
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git
+  stack: cflinuxfs3
