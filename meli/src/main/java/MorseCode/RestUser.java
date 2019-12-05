@@ -19,6 +19,7 @@ public class RestUser {
     public @ResponseBody
     MorseResponse toMorse(@RequestBody MorseResponse string) {
         MorseCode morseCode = new MorseCode();
+        System.out.println(morseCode.translate2Morse(string.getText()));
         return new MorseResponse(morseCode.translate2Morse(string.getText()));
     }
 

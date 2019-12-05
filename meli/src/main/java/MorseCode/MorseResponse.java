@@ -2,7 +2,7 @@ package MorseCode;
 
 import java.io.Serializable;
 
-public class MorseResponse implements Serializable {
+public class MorseResponse {
 
     private static final long serialVersionUID = 5529613997641578535L;
 

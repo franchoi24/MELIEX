@@ -91,8 +91,6 @@ public class MorseCode {
 
             }
 
-
-
             token.append(toParse.substring(index, index + 1));
 
             dontCheck = false;
@@ -119,11 +117,8 @@ public class MorseCode {
         StringBuilder builder = new StringBuilder(); //this is where the real string is going to be stored
         StringBuilder token = new StringBuilder(); //this is used to get token by token
         for (int index = 0 ; index < toParse.length(); index++){
-
-            if(toParse.charAt(index) == ' '){
-                builder.append("  "); //we append two spaces because that is the standard we adopted
-            }
             builder.append(bidiMap.inverseBidiMap().get(toParse.substring(index, index + 1))); //could not find a better way to get the string from an index
+            if(index != toParse.length() - 1) // we do not want a space between end and last symbol
             builder.append(" "); //after every letter there is a space
 
         }
@@ -152,6 +147,7 @@ public class MorseCode {
 
         String result;
         result = parse2Morse(aux);
+
 
         return result;
     }

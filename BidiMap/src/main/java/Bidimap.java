@@ -61,7 +61,7 @@ public class Bidimap {
     //code might look repetitive but their edge cases are too different to be modularized and coding an aux function just to initialize vars is too much
 
 
-    private String parse2Human(String toParse){
+    public String parse2Human(String toParse){
         StringBuilder builder = new StringBuilder(); //this is where the real string is going to be stored
 
         boolean dontCheck = false; //if there is a space after a space we need to parse it as a space in the result
@@ -117,11 +117,8 @@ public class Bidimap {
         StringBuilder builder = new StringBuilder(); //this is where the real string is going to be stored
         StringBuilder token = new StringBuilder(); //this is used to get token by token
         for (int index = 0 ; index < toParse.length(); index++){
-
-            if(toParse.charAt(index) == ' '){
-                builder.append("  "); //we append two spaces because that is the standard we adopted
-            }
             builder.append(bidiMap.inverseBidiMap().get(toParse.substring(index, index + 1))); //could not find a better way to get the string from an index
+            if(index != toParse.length() - 1)
             builder.append(" "); //after every letter there is a space
 
         }
