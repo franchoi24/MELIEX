@@ -97,7 +97,7 @@ public class Bidimap {
         }
 
 
-        if(!token.equals(""))
+        if(!(token.equals("") || token.equals("EOF") || token.equals(" ")))
 
         builder.append(bidiMap.get(token.toString())); //last input
 
