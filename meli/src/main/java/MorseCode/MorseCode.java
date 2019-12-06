@@ -203,7 +203,7 @@ public class MorseCode {
                 return " ";
             }
             else {
-                return "   ";
+                return "  ";
             }
         }
         else {

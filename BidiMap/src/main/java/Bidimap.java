@@ -73,12 +73,15 @@ public class Bidimap {
             index++;
         }
 
+
         for ( ; index < toParse.length() ; index++){
 
 
             if (!dontCheck && toParse.charAt(index) == ' '){
 
                 dontCheck = true;
+
+
                 builder.append(bidiMap.get(token.toString())); //puts the corresponding char on the string builder
 
                 token.delete(0, token.length()); //clear the token to start a new one
@@ -90,10 +93,10 @@ public class Bidimap {
             }
 
 
-
             token.append(toParse.substring(index, index + 1));
 
             dontCheck = false;
+
         }
 
 
@@ -133,7 +136,11 @@ public class Bidimap {
 
         Double min = findMinInt(toDecode);
 
-        String morse = parseBits2Morse(min, toDecode);
+        int last = toDecode.lastIndexOf("1");
+
+
+
+        String morse = parseBits2Morse(min, toDecode.substring(0, last + 1));
         String result;
         result = parse2Human(morse);
 
@@ -178,7 +185,6 @@ public class Bidimap {
 
             index++;
         }
-
         builder.append(parseBits2Token(token.length(), unit, bits.charAt(index)));
 
 
