@@ -75,7 +75,7 @@ public class MorseCode {
             index++;
         }
 
-        for ( ; index < toParse.length() ; index++){
+        for ( ; index < toParse.length() - 1; index++){
 
 
             if (!dontCheck && toParse.charAt(index) == ' '){

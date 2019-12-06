@@ -73,7 +73,7 @@ public class Bidimap {
             index++;
         }
 
-        for ( ; index < toParse.length() ; index++){
+        for ( ; index < toParse.length() - 1; index++){
 
 
             if (!dontCheck && toParse.charAt(index) == ' '){
@@ -89,15 +89,13 @@ public class Bidimap {
 
             }
 
-
-
             token.append(toParse.substring(index, index + 1));
 
             dontCheck = false;
         }
 
 
-        if(!(token.equals("") || token.equals("EOF") || token.equals(" ")))
+        if(!(token.equals("") || token.equals(".-.-.-") || token.equals(" ")))
 
         builder.append(bidiMap.get(token.toString())); //last input
 
