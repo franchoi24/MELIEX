@@ -96,6 +96,9 @@ public class Bidimap {
             dontCheck = false;
         }
 
+
+        if(!token.equals(""))
+
         builder.append(bidiMap.get(token.toString())); //last input
 
 
@@ -177,6 +180,7 @@ public class Bidimap {
             index++;
         }
 
+        if(!token.equals(""))
         builder.append(parseBits2Token(token.length(), unit, bits.charAt(index)));
 
 

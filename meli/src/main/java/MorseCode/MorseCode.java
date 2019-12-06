@@ -96,6 +96,7 @@ public class MorseCode {
             dontCheck = false;
         }
 
+        if(!token.equals(""))
         builder.append(bidiMap.get(token.toString())); //last input
 
 
@@ -178,6 +179,7 @@ public class MorseCode {
             index++;
         }
 
+        if(!token.equals(""))
         builder.append(parseBits2Token(token.length(), unit, bits.charAt(index)));
 
 
