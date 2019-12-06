@@ -132,7 +132,9 @@ public class MorseCode {
 
         Double min = findMinInt(toDecode);
 
-        String morse = parseBits2Morse(min, toDecode);
+        int last = toDecode.lastIndexOf("1");
+
+        String morse = parseBits2Morse(min, toDecode.substring(0, last + 1));
         String result;
         result = parse2Human(morse);
 
